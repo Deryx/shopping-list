@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Shopping List</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<fieldset>
+    	<div id="floater"></div>
+    	<div id="content">
+        	<h1>Shopping List</h1>
+            <form>
+                <div>
+                    New Item:<br /><input type="text" id="tbListItem" />
+                </div>
+                <div>
+                    <button type="button" class="green_color" id="btnAddItem">Add Item</button>
+                    <button type="button" class="red_color" id="btnRemoveItem">Remove Item(s)</button>
+                </div>
+                <div id="list">
+                </div>
+            </form>
+        </div>
+    </fieldset>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="application.js"></script>
+
+</body>
+</html>

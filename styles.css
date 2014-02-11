@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;	
+	font-family: "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+fieldset
+{
+	margin: 0 auto;
+	padding: 0;
+	width: 500px;
+	height: 400px;
+	text-align: center;
+	border: none;
+}
+
+h1
+{
+	font-size: 50px;	
+}
+
+#floater
+{
+	float: left;
+	height: 50%;
+	width: 100%;
+	margin-bottom: -50px;
+}
+
+#content
+{
+	clear: both;
+	border: 1px solid #CCC;	
+	border-radius: 20px;
+}
+
+ul
+{
+	list-style-type: none;	
+	margin-right: 20px;
+}
+
+li
+{
+	text-align: left;	
+	width: 400px;
+	border: 1px solid #CCC;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+
+input[type="text"]
+{
+	width: 250px;	
+	padding: 3px;
+	border: 1px solid #666;
+	border-radius: 5px;
+}
+
+input[type="checkbox"]
+{
+	float: left;	
+	margin-right: 10px;
+}
+
+button
+{
+	margin-top: 30px;	
+	margin-bottom: 20px;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.green_color
+{
+	background: #0C3;
+}
+
+.red_color
+{
+	background: #F00;	
+}
