@@ -45,8 +45,6 @@ function add( newItem )
 
 function check_off()
 {
-	var removeArray = {};
-	
 	var listItems = $( "li" );
 	
 	$.each( listItems.has( "input[type='checkbox']:checked" ), function()
