@@ -68,8 +68,10 @@ input[type="text"]
 {
 	width: 250px;	
 	padding: 3px;
-	border: 1px solid #666;
+	border: none;
+	border-bottom: 1px solid #000;
 	border-radius: 5px;
+	text-align: center;
 	text-transform: capitalize;
 }
 
