@@ -1,14 +1,12 @@
 // JavaScript Document
-var listArray = new Array( "Turkey Bacon", "Dozen Large Eggs", "American Cheese Slices" );
+
+var listArray = new Array();
 
 $(document).ready( function()
 	{
-		displayList();
-		
 		$( "#btnAddItem" ).on( "click", function( e )
 			{
 				var inputItem = $( "#tbListItem" ).val();
-				e.preventDefault;
 				add( inputItem );
 				$( "#tbListItem" ).val( "" );
 				displayList();
@@ -41,12 +39,21 @@ function displayList()
 
 function add( newItem )
 {
-	listArray.push( newItem );
+	if ( newItem != "" )
+		listArray.push( newItem );
 }
 
 function check_off()
 {
+	var removeArray = {};
+	
 	var listItems = $( "li" );
 	
-	listItems.has( "input[type='checkbox']:checked" ).remove();
+	$.each( listItems.has( "input[type='checkbox']:checked" ), function()
+	{
+		var i = listArray.indexOf( this );
+		listArray.splice( i, 1 );
+	});
+	
+	displayList();
 }
