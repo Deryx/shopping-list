@@ -4,13 +4,17 @@
     <meta charset="utf-8">
     <title>Shopping List</title>
     <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 </head>
 
-<body>
+<body class="app">
 
-	<fieldset>
+	<fieldset class="app">
     	<div id="floater"></div>
-    	<div id="content">
+    	<div id="app-content">
         	<h1>Shopping List</h1>
             <form>
                 <div>
@@ -21,12 +25,12 @@
                     <button type="button" class="red_color" id="btnRemoveItem">Remove Item(s)</button>
                 </div>
                 <div id="list">
+                    <ul></ul>
                 </div>
             </form>
         </div>
     </fieldset>
 
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="application.js"></script>
 
 </body>
