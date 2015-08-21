@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-body
+body.app
 {
 	margin: 0;
 	padding: 0;
@@ -11,7 +11,7 @@ body
 	background: #FF9966;
 }
 
-fieldset
+fieldset.app
 {
 	margin: 0 auto;
 	padding: 0;
@@ -21,7 +21,7 @@ fieldset
 	border: none;
 }
 
-h1
+#app-content h1
 {
 	font-size: 50px;	
 }
@@ -34,7 +34,7 @@ h1
 	margin-bottom: -50px;
 }
 
-#content
+#app-content
 {
 	clear: both;
 	border: 1px solid #CCC;	
@@ -44,16 +44,16 @@ h1
 	padding-bottom: 20px;
 	padding-right: 15px;
 	background: #FFF;
-}	
+}
 
 
-ul
+#app-content ul
 {
 	list-style-type: none;	
 	margin-right: 20px;
 }
 
-li
+#app-content li
 {
 	text-align: left;	
 	width: 400px;
@@ -64,23 +64,22 @@ li
 	text-transform: capitalize;
 }
 
-input[type="text"]
+#app-content input[type="text"]
 {
 	width: 250px;	
 	padding: 3px;
-	border: none;
-	border-bottom: 1px solid #000;
-	text-align: center;
+	border: 1px solid #666;
+	border-radius: 5px;
 	text-transform: capitalize;
 }
 
-input[type="checkbox"]
+#app-content input[type="checkbox"]
 {
 	float: left;	
 	margin-right: 10px;
 }
 
-button
+#app-content button
 {
 	margin-top: 30px;	
 	margin-bottom: 20px;
@@ -88,6 +87,13 @@ button
 	border: none;
 	border-radius: 8px;
 	color: #FFF;
+}
+
+#app-content span {
+	float: right;
+	margin-right: 10px;
+	color: #FF0000;
+	font-weight: bold;
 }
 
 .green_color
