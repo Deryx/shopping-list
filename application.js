@@ -1,59 +1,46 @@
 // JavaScript Document
 
-var listArray = new Array();
+$(document).ready( function() {
+		// Add an item on keypress, "enter"
+		$(document).on( "keypress", function(e) {
+			if (e.which == 13) {
+				e.preventDefault();
+				var inputItem = $("#tbListItem").val();
+				addItem( inputItem );
+				$('#tbListItem').val("");
+			}
+		});
 
-$(document).ready( function()
-	{
-		$( "#btnAddItem" ).on( "click", function( e )
-			{
+		// Add an item using the "Add Item" button
+		$("#btnAddItem").on("click", function(e) {
 				var inputItem = $( "#tbListItem" ).val();
-				add( inputItem );
-				$( "#tbListItem" ).val( "" );
-				displayList();
+				addItem( inputItem );
+                $('#tbListItem').val("");
 			}
 		 );
-		 
-		 $( "#btnRemoveItem" ).on( "click", function( e )
-		 	{
-				check_off();
+
+		// Remove an item pressing the "x"
+		$(document).on("click", ".glyphicon", function() {
+				$(this).closest('li').remove();
+			}
+		);
+
+		// Remove item(s) using "Remove Item(s)" button
+		$("#btnRemoveItem").on( "click", function(e) {
+				removeItems();
 			}
 		);
 	}
 );
 
-function displayList()
-{
-	$( "div#list" ).html( function()
-	{
-		var listLength = listArray.length;
-		var listDisplay = "<ul>";
-		for ( var i = 0; i < listLength; i++ )
-		{
-			listDisplay += "<li><input type='checkbox'>" + listArray[i] + "</li>"
-		}
-		listDisplay += "</ul>";
-		
-		return listDisplay;
-	});
+function addItem(newItem) {
+	if (newItem != null && newItem != "") {
+		var listItem = "<li><input type='checkbox' />" + newItem + "<span class='glyphicon glyphicon-remove'></span></li>";
+
+		$('ul').append(listItem);
+	}
 }
 
-function add( newItem )
-{
-	if ( newItem != "" )
-		listArray.push( newItem );
-}
-
-function check_off()
-{
-	var removeArray = {};
-	
-	var listItems = $( "li" );
-	
-	$.each( listItems.has( "input[type='checkbox']:checked" ), function()
-	{
-		var i = listArray.indexOf( this );
-		listArray.splice( i, 1 );
-	});
-	
-	displayList();
+function removeItems() {
+    $("li").remove(":has(input[type='checkbox']:checked)");
 }
